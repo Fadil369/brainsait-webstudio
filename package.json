@@ -4,12 +4,12 @@
   "sideEffects": false,
   "scripts": {
     "build": "react-router build",
-    "dev": "react-router dev",
+    "dev": "wrangler dev",
     "typecheck": "tsc",
     "start": "react-router-serve ./build/server/index.js",
-    "deploy": "npm run build && wrangler pages deploy build/client",
-    "deploy:preview": "npm run build && wrangler pages deploy build/client --branch=preview",
-    "cf:dev": "wrangler pages dev build/client",
+    "deploy": "wrangler deploy",
+    "deploy:preview": "wrangler deploy --env preview",
+    "preview:local": "npm run build && wrangler dev",
     "preview": "npm run build && npm run start"
   },
   "dependencies": {
