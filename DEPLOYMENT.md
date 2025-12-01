@@ -37,6 +37,9 @@ git push -u origin main
   - **Build output directory**: `build/client`
   - **Root directory**: `/` (leave empty)
   - **Node version**: `20`
+  - **Deploy command**: (leave empty - do not enter any command)
+
+> ⚠️ **Important**: Leave the **Deploy command** field empty. Cloudflare Pages automatically deploys the build output directory. Do not enter `nom`, `npm`, or `npx` commands.
 
 4. **Set Environment Variables**
 In Cloudflare Pages → Settings → Environment Variables:
@@ -145,6 +148,12 @@ rm -rf node_modules build
 npm install
 npm run build
 ```
+
+**Deploy command error (`nom: not found`):**
+- This is a typo - `nom` should be `npm` or `npx`
+- **Solution**: Leave the deploy command field empty in Cloudflare Pages settings
+- Cloudflare Pages automatically deploys the build output directory
+- If you need a deploy command, use: `npx wrangler pages deploy build/client`
 
 **Environment variables not working:**
 - Check spelling matches exactly

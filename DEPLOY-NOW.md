@@ -49,7 +49,10 @@ git push -u origin main
    Framework preset: React
    Build command: npm run build
    Build output directory: build/client
+   Deploy command: (leave empty - Cloudflare Pages handles this automatically)
    ```
+   
+   > ⚠️ **IMPORTANT**: Do NOT enter a deploy command. Leave it empty. Cloudflare Pages automatically serves the build output directory. Do not enter `nom`, `npm`, or `npx` commands here.
    
 5. **Click: Save and Deploy**
 
@@ -108,6 +111,11 @@ After 2-3 minutes:
 - Check build logs in Cloudflare
 - Verify environment variables
 - Ensure build command is correct
+
+**Deploy fails with `nom: not found`?**
+- This is a typo! `nom` should be `npm` or `npx`
+- **Fix**: In Cloudflare Pages settings, **leave the deploy command empty**
+- Cloudflare Pages automatically deploys the build output directory
 
 **Page not loading?**
 - Check build output directory: `build/client`

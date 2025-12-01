@@ -9,6 +9,12 @@ build/client
 # Root directory (default: repository root)
 # /
 
+# Deploy command (IMPORTANT: leave empty for Cloudflare Pages Git integration)
+# For Cloudflare Pages connected to Git, do NOT set a deploy command.
+# Cloudflare Pages automatically deploys the build output directory.
+# If you must use a deploy command, use: npx wrangler pages deploy build/client
+# DO NOT use "nom" - this is a common typo for "npm" or "npx"
+
 # Environment variables (set in Cloudflare dashboard)
 # NODE_ENV=production
 # STRIPE_PUBLIC_KEY=pk_live_...
