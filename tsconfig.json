@@ -12,7 +12,8 @@
     ],
     "types": [
       "vite/client",
-      "@webstudio-is/react-sdk/placeholder"
+      "@webstudio-is/react-sdk/placeholder",
+      "node"
     ],
     "isolatedModules": true,
     "esModuleInterop": true,
