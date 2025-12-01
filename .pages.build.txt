@@ -1,0 +1,15 @@
+# Cloudflare Pages Build Configuration
+
+# Build command
+npm run build
+
+# Build output directory  
+build/client
+
+# Root directory (default: repository root)
+# /
+
+# Environment variables (set in Cloudflare dashboard)
+# NODE_ENV=production
+# STRIPE_PUBLIC_KEY=pk_live_...
+# Add others as needed
