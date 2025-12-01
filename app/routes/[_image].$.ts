@@ -7,8 +7,7 @@ import {
 } from "ipx";
 import { createApp, toWebHandler } from "h3";
 
-const envDomains = typeof process !== 'undefined' ? process.env?.DOMAINS : undefined;
-const domains = envDomains?.split(/\s*,\s*/) ?? [];
+const domains = process.env?.DOMAINS?.split(/\s*,\s*/) ?? [];
 
 const ipx = createIPX({
   storage: ipxFSStorage({ dir: "./public" }),
