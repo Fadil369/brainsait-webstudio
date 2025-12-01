@@ -1,0 +1,10 @@
+# Cloudflare Pages Redirects
+# Format: /old-path /new-path [status-code]
+
+# Force HTTPS (handled automatically by CF, but good to document)
+# http://* https://:splat 301
+
+# Legacy URL redirects (add as needed)
+# /old-booking /booking 301
+
+# SPA fallback is handled by React Router

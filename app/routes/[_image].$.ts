@@ -1,4 +1,3 @@
-import { env } from "node:process";
 import type { LoaderFunctionArgs } from "react-router";
 import {
   createIPX,
@@ -8,7 +7,8 @@ import {
 } from "ipx";
 import { createApp, toWebHandler } from "h3";
 
-const domains = env.DOMAINS?.split(/\s*,\s*/) ?? [];
+const envDomains = typeof process !== 'undefined' ? process.env?.DOMAINS : undefined;
+const domains = envDomains?.split(/\s*,\s*/) ?? [];
 
 const ipx = createIPX({
   storage: ipxFSStorage({ dir: "./public" }),

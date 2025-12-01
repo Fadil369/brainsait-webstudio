@@ -303,7 +303,7 @@ const Outlet = () => {
         url={url}
         pageMeta={pageMeta}
         host={host}
-        siteName={siteName}
+        siteName={siteName ?? ""}
         imageLoader={constants.imageLoader}
         assetBaseUrl={constants.assetBaseUrl}
       />
